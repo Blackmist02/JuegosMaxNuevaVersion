@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -37,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'juegosMax.apps.JuegosmaxConfig',
 ]
 
 MIDDLEWARE = [
@@ -47,6 +49,13 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.common.CommonMiddleware',
+
+]
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost",
+    "https://tuotrodominio.com",  # Agrega otros dominios si es necesario
 ]
 
 ROOT_URLCONF = 'JuegosMaxNuevaVersion.urls'
@@ -63,6 +72,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'juegosMax.context_processors.cart_context_processor',
             ],
         },
     },
@@ -76,10 +86,18 @@ WSGI_APPLICATION = 'JuegosMaxNuevaVersion.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+        'ENGINE': 'django.db.backends.oracle',
+        'NAME': '127.0.0.1:1521/xe',
+        'USER': 'c##juegosMax',
+        'PASSWORD': 'juegosMax',
+        'TEST': {
+            'USER': 'default_test',
+            'TBLSPACE': 'default_test_tbls',
+            'TBLSPACE_TMP': 'default_test_tbls_tmp',
+        },
+    },
 }
+
 
 
 # Password validation
@@ -104,9 +122,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-cl'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Santiago'
 
 USE_I18N = True
 
@@ -116,9 +134,27 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
+BASE_DIR = Path(__file__).resolve().parent.parent
+
 STATIC_URL = 'static/'
+STATICFILES_DIRS = [
+    BASE_DIR / "juegosMax" / "templates" / "juegosMax" / "assets" / "css",
+    BASE_DIR / "juegosMax" / "templates" / "juegosMax" / "assets" / "js",
+    BASE_DIR / "juegosMax" / "templates" / "juegosMax" / "assets" / "img",
+    BASE_DIR / "juegosMax" / "templates" / "juegosMax" / "assets" / "bootstrap" / "css",
+    BASE_DIR / "juegosMax" / "templates" / "juegosMax" / "assets" / "bootstrap" / "js",
+
+    # Añade más directorios aquí si es necesario
+]
+
+MEDIA_URL = 'media/portadas/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/portadas')
+
+LOGIN_REDIRECT_URL = 'index'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+

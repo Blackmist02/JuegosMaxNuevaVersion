@@ -4,55 +4,134 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f2c9ea0-74ff-4212-b785-50b08a8d729b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/JuegosMaxNuevaVersion.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JuegosMaxNuevaVersion/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JuegosMaxNuevaVersion/asgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JuegosMaxNuevaVersion/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JuegosMaxNuevaVersion/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JuegosMaxNuevaVersion/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+    <list default="true" id="8f2c9ea0-74ff-4212-b785-50b08a8d729b" name="Changes" comment="primer commit">
+      <change afterPath="$PROJECT_DIR$/juegosMax/context_processors.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/juegosMax/form.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/juegosMax/templates/juegosMax/assets/css/font.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/juegosMax/templates/juegosMax/assets/css/miniCarousel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/juegosMax/templates/juegosMax/assets/js/mapa.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/juegosMax/templates/juegosMax/consola_PlayStation_5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/juegosMax/templates/juegosMax/consola_Xbox_Series.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/juegosMax/templates/juegosMax/pago.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/juegosMax/templates/juegosMax/pago_realizado.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/juegosMax/templates/juegosMax/view_cart.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/m.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/portadas/persona5_royal_ps5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/s.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/JuegosMaxNuevaVersion.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/JuegosMaxNuevaVersion.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JuegosMaxNuevaVersion/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/JuegosMaxNuevaVersion/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JuegosMaxNuevaVersion/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/JuegosMaxNuevaVersion/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Blackmist02&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Blackmist02/JuegosMaxNuevaVersion.git&quot;,
+    &quot;accountId&quot;: &quot;6d8ee7e5-082e-41c7-99d0-1119674c2bf3&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2hfTIyC5zm7NWzDZVNaEeJqiZHy" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JavaScript Debug.login.html.executor": "Run",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Django Server.JuegosMaxNuevaVersion.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.login.html.executor&quot;: &quot;Run&quot;,
+    &quot;Python.manage.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;database.data.extractors.current.export.id&quot;: &quot;SQL Inserts&quot;,
+    &quot;database.data.extractors.current.id&quot;: &quot;SQL Inserts&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/inach/OneDrive/Documentos/Proyectos/Proyectos web/juegosMax&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;oracle&quot;
+    ]
   }
-}]]></component>
-  <component name="RunManager" selected="JavaScript Debug.login.html">
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\inach\OneDrive\Documentos\Proyectos\Proyectos web\JuegosMaxNuevaVersion\juegosMax\templates\juegosMax\assets" />
+      <recent name="C:\Users\inach\OneDrive\Documentos\Proyectos\Proyectos web\JuegosMaxNuevaVersion\media" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\inach\OneDrive\Documentos\Proyectos\Proyectos web\JuegosMaxNuevaVersion\juegosMax\templates\juegosMax" />
+      <recent name="C:\Users\inach\OneDrive\Documentos\Proyectos\Proyectos web\JuegosMaxNuevaVersion\media\media" />
+      <recent name="C:\Users\inach\OneDrive\Documentos\Proyectos\Proyectos web\JuegosMaxNuevaVersion\juegosMax" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Django Server.JuegosMaxNuevaVersion">
     <configuration name="login.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/JuegosMaxNuevaVersion/juegosMax/templates/juegosMax/login.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="JuegosMaxNuevaVersion" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/manage.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <configuration name="JuegosMaxNuevaVersion" type="Python.DjangoServer" factoryName="Django server">
@@ -62,6 +141,7 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="JuegosMaxNuevaVersion.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -81,6 +161,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.manage" />
         <item itemvalue="JavaScript Debug.login.html" />
       </list>
     </recent_temporary>
@@ -101,11 +182,42 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1717984056093</updated>
-      <workItem from="1717984057559" duration="1625000" />
+      <workItem from="1717984057559" duration="2552000" />
+      <workItem from="1718029997150" duration="10211000" />
+      <workItem from="1718060129167" duration="7237000" />
+      <workItem from="1718114311470" duration="15338000" />
+      <workItem from="1718157079258" duration="5664000" />
+      <workItem from="1718201838784" duration="18535000" />
+      <workItem from="1718287698494" duration="30321000" />
+      <workItem from="1718380060435" duration="17125000" />
+      <workItem from="1718465998701" duration="9839000" />
+      <workItem from="1718568149728" duration="20781000" />
+      <workItem from="1718633630788" duration="9328000" />
+      <workItem from="1718940547345" duration="10722000" />
+      <workItem from="1718988415339" duration="16871000" />
+      <workItem from="1719030098939" duration="4916000" />
+      <workItem from="1719075828528" duration="15616000" />
+      <workItem from="1719175187792" duration="4474000" />
     </task>
+    <task id="LOCAL-00001" summary="primer commit">
+      <option name="closed" value="true" />
+      <created>1717991944574</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1717991944574</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="primer commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="primer commit" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/JuegosMaxNuevaVersion$manage.coverage" NAME="manage Coverage Results" MODIFIED="1718033371570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

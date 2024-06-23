@@ -1,0 +1,64 @@
+.carousel-indicators img{
+    width: 100px;
+    display: block;
+}
+
+.carousel-indicators button{
+    width: max-content!important;
+}
+
+.carousel-indicators{
+    position: unset;
+}
+
+.carousel-indicators button.active img{
+    border: 1px solid #8C182D;
+}
+
+
+.prueba1{
+    --border-radius-small: 0.75rem;
+    --border-radius: 1rem;
+    --app-height: 962px;
+    font-family: museo-sans, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    color: rgb(72, 72, 72);
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    margin: 2rem 0px;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+
+
+a {
+  color: red;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.imagen-ajustada {
+    width: 300px;
+    height: 200px;
+    display: block;
+        }
+

@@ -15,8 +15,31 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from juegosMax import views
+from django.conf import settings
+from django.conf.urls.static import static
 
+app_name = 'juegosMax'
 urlpatterns = [
     path('admin/', admin.site.urls),
-]
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('', views.home, name="index"),
+    path('juego/<int:juego_id>/', views.juego, name="juego"),
+    path('juego/', views.juego, name="juego"),
+    path('faq/', views.faq, name="faq"),
+    path('contacto/', views.contacto, name="contacto"),
+    path('404/', views.errorPage, name="404"),
+    path('login/', views.login_view, name="login"),
+    path('logout/', views.logout_view, name="logout"),
+    path('signup/', views.signup, name='signup'),
+    path('Nintendo_Switch/', views.consolaNinSwitch, name='Nintendo_Switch'),
+    path('PS5/', views.consolaPs5, name='PS5'),
+    path('Xbox_Series_X_S/', views.consolaXboxSeries, name='Xbox_Series_X'),
+    path('login/juegosMax/index.html', views.indexLogeado, name='juegos_max_index'),
+    path('agregar_Al_Carrito/<int:product_id>/', views.agregar_Al_Carrito, name='agregar_Al_Carrito'),
+    path('view_carrito/', views.view_carrito, name='view_carrito'),
+    path('actualizar_carrito/<int:product_id>/', views.actualizar_carrito, name='actualizar_carrito'),
+    path('agregar_comentario/<int:juego_id>/', views.agregar_comentario, name='agregar_comentario'),
+    path('pago/', views.view_pago, name='pago'),
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
