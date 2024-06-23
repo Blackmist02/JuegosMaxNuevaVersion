@@ -4,25 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f2c9ea0-74ff-4212-b785-50b08a8d729b" name="Changes" comment="primer commit">
-      <change afterPath="$PROJECT_DIR$/juegosMax/context_processors.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/juegosMax/form.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/juegosMax/templates/juegosMax/assets/css/font.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/juegosMax/templates/juegosMax/assets/css/miniCarousel.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/juegosMax/templates/juegosMax/assets/js/mapa.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/juegosMax/templates/juegosMax/consola_PlayStation_5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/juegosMax/templates/juegosMax/consola_Xbox_Series.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/juegosMax/templates/juegosMax/pago.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/juegosMax/templates/juegosMax/pago_realizado.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/juegosMax/templates/juegosMax/view_cart.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/m.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/portadas/persona5_royal_ps5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/s.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/JuegosMaxNuevaVersion.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/JuegosMaxNuevaVersion.iml" afterDir="false" />
+    <list default="true" id="8f2c9ea0-74ff-4212-b785-50b08a8d729b" name="Changes" comment="segundo commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JuegosMaxNuevaVersion/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/JuegosMaxNuevaVersion/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JuegosMaxNuevaVersion/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/JuegosMaxNuevaVersion/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +26,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -66,36 +54,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Django Server.JuegosMaxNuevaVersion.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.login.html.executor&quot;: &quot;Run&quot;,
-    &quot;Python.manage.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;database.data.extractors.current.export.id&quot;: &quot;SQL Inserts&quot;,
-    &quot;database.data.extractors.current.id&quot;: &quot;SQL Inserts&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/inach/OneDrive/Documentos/Proyectos/Proyectos web/juegosMax&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Django Server.JuegosMaxNuevaVersion.executor": "Run",
+    "JavaScript Debug.login.html.executor": "Run",
+    "Python.manage.executor": "Run",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "database.data.extractors.current.export.id": "SQL Inserts",
+    "database.data.extractors.current.id": "SQL Inserts",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/inach/OneDrive/Documentos/Proyectos/Proyectos web/juegosMax",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "vcs.Git",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;oracle&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "oracle"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\inach\OneDrive\Documentos\Proyectos\Proyectos web\JuegosMaxNuevaVersion\juegosMax\templates\juegosMax\assets" />
@@ -197,7 +185,7 @@
       <workItem from="1718988415339" duration="16871000" />
       <workItem from="1719030098939" duration="4916000" />
       <workItem from="1719075828528" duration="15616000" />
-      <workItem from="1719175187792" duration="4474000" />
+      <workItem from="1719175187792" duration="6802000" />
     </task>
     <task id="LOCAL-00001" summary="primer commit">
       <option name="closed" value="true" />
@@ -207,15 +195,35 @@
       <option name="project" value="LOCAL" />
       <updated>1717991944574</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="segundo commit">
+      <option name="closed" value="true" />
+      <created>1719183302779</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1719183302779</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="primer commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="primer commit" />
+    <MESSAGE value="segundo commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="segundo commit" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/JuegosMaxNuevaVersion$manage.coverage" NAME="manage Coverage Results" MODIFIED="1718033371570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
