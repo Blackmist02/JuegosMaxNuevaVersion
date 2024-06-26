@@ -30,6 +30,9 @@
                         <div class="dropdown-menu"><a class="dropdown-item" href="{% url 'Nintendo_Switch' %}">Nintendo Switch</a><a class="dropdown-item" href="{% url 'PS5' %}">PlayStation 5</a><a class="dropdown-item" href="{% url 'Xbox_Series_X' %}">Xbox Series X/S</a></div>                    </li>
                     <li class="nav-item"></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'contacto' %}"><span style="color: rgb(242, 242, 242);">Contacto</span></a></li>
+                    {% if user.is_superuser %}
+                        <li class="nav-item"><a class="nav-link" href="{% url 'AgregarJuego' %}"><span style="color: rgb(242, 242, 242);">Agregar Juego</span></a></li>
+                    {% endif %}
                 </ul>
                 {% if user.is_authenticated%}
                         <a class="nav-item" ><span style="color: rgb(242, 242, 242);margin-right: 10px;">Bienvenido, {{ user.username }}!</span>  </a>

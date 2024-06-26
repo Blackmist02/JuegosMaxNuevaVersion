@@ -4,16 +4,19 @@ from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django.core.mail import send_mail
 from django.core.validators import RegexValidator
+from juegosMax.models import Imagen, Trailer, Juego
+
+
 class LoginForm(AuthenticationForm):
     username = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}))
     password = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control'}))
 
 
 class SignUpForm(UserCreationForm):
-    email = forms.EmailField(required=True, widget=forms.EmailInput(attrs={'class': 'form-control'}))
-    username = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}))
-    password1 = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control'}))
-    password2 = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control'}))
+    email = forms.EmailField(required=True, label='Correo Electronico', widget=forms.EmailInput(attrs={'class': 'form-control'}))
+    username = forms.CharField(label='Nombre de Usuario', widget=forms.TextInput(attrs={'class': 'form-control'}))
+    password1 = forms.CharField(label='Contraseña', widget=forms.PasswordInput(attrs={'class': 'form-control'}))
+    password2 = forms.CharField(label='Repita Contraseña', widget=forms.PasswordInput(attrs={'class': 'form-control'}))
 
     class Meta:
         model = User
@@ -37,8 +40,8 @@ class ContactForm(forms.Form):
                   f"Email: {self.cleaned_data['email']}\n" \
                   f"Mensaje: {self.cleaned_data['mensaje']}"
 
-        from_email = 'TuEmail@example.com'  # Replace with your email address
-        recipient_list = ['recipient_email@example.com']  # Replace with your recipient email address
+        from_email = 'TuEmail@example.com'
+        recipient_list = ['recipient_email@example.com']
 
         send_mail(
             subject,
@@ -75,3 +78,113 @@ class PagoForm(forms.Form):
                 code='invalid_cvv'
             )
         ],widget=forms.TextInput(attrs={'class': 'form-control', 'style': 'background-color: #40010D; color: white;' }))
+
+
+class JuegoForm(forms.Form):
+    nombre = forms.CharField(label='Nombre', widget=forms.TextInput(attrs={'class': 'form-control', 'style': 'background-color: #40010D; color: white;'}))
+    descripcionCorta = forms.CharField(label='Descripción corta', widget=forms.TextInput(attrs={'class': 'form-control', 'style': 'background-color: #40010D; color: white;'}))
+    fecha_lanzamiento = forms.DateField(label='Fecha de lanzamiento', widget=forms.DateInput(attrs={'class': 'form-control', 'style': 'background-color: #40010D; color: white;'}))
+    desarrollador = forms.CharField(label='Desarrollador', widget=forms.TextInput(attrs={'class': 'form-control', 'style': 'background-color: #40010D; color: white;'}))
+    genero = forms.CharField(label='Género', widget=forms.TextInput(attrs={'class': 'form-control', 'style': 'background-color: #40010D; color: white;'}))
+    plataforma = forms.CharField(label='Plataforma', widget=forms.TextInput(attrs={'class': 'form-control', 'style': 'background-color: #40010D; color: white;'}))
+    clasificacion = forms.CharField(label='Clasificación', widget=forms.TextInput(attrs={'class': 'form-control', 'style': 'background-color: #40010D; color: white;'}))
+    idioma = forms.CharField(label='Idioma', widget=forms.TextInput(attrs={'class': 'form-control', 'style': 'background-color: #40010D; color: white;'}))
+    requisitos = forms.CharField(label='Requisitos', widget=forms.TextInput(attrs={'class': 'form-control', 'style': 'background-color: #40010D; color: white;'}))
+    stock = forms.IntegerField(label='Stock', widget=forms.NumberInput(attrs={'class': 'form-control', 'style': 'background-color: #40010D; color: white;'}))
+    available = forms.BooleanField(label='Disponible', required=False, widget=forms.CheckboxInput(attrs={'class': 'form-check-input', 'style': 'background-color: #40010D; color: white;'}))
+    precio = forms.IntegerField(label='Precio', widget=forms.NumberInput(attrs={'class': 'form-control', 'style': 'background-color: #40010D; color: white;'}))
+    descripcionExtensa = forms.CharField(label='Descripción', widget=forms.Textarea(attrs={'class': 'form-control', 'style': 'background-color: #40010D; color: white;'}))
+
+    imagen1 = forms.ImageField(label='Imagen 1', widget=forms.FileInput(attrs={'class': 'form-control'}))
+    imagen2 = forms.ImageField(label='Imagen 2', required=False, widget=forms.FileInput(attrs={'class': 'form-control'}))
+    imagen3 = forms.ImageField(label='Imagen 3', required=False, widget=forms.FileInput(attrs={'class': 'form-control'}))
+    imagen4 = forms.ImageField(label='Imagen 4', required=False, widget=forms.FileInput(attrs={'class': 'form-control'}))
+
+    video_url = forms.URLField(label='URL del video', widget=forms.URLInput(attrs={'class': 'form-control', 'style': 'background-color: #40010D; color: white;'}))
+    img_url = forms.CharField(label='URL de la miniatura del video', widget=forms.TextInput(attrs={'class': 'form-control', 'style': 'background-color: #40010D; color: white;'}))
+
+    def save(self):
+        juego = Juego(
+            nombre=self.cleaned_data['nombre'],
+            descripcion=self.cleaned_data['descripcionCorta'],
+            fecha_lanzamiento=self.cleaned_data['fecha_lanzamiento'],
+            desarrolladora=self.cleaned_data['desarrollador'],
+            genero=self.cleaned_data['genero'],
+            plataforma=self.cleaned_data['plataforma'],
+            clasificacion=self.cleaned_data['clasificacion'],
+            idioma=self.cleaned_data['idioma'],
+            requisitos=self.cleaned_data['requisitos'],
+            stock=self.cleaned_data['stock'],
+            available=self.cleaned_data['available'],
+            precio=self.cleaned_data['precio'],
+            descripcionExtensa=self.cleaned_data['descripcionExtensa']
+        )
+        juego.save()
+
+
+        # Crear imágenes asociadas
+        imagenes = [
+            self.cleaned_data.get('imagen1'),
+            self.cleaned_data.get('imagen2'),
+            self.cleaned_data.get('imagen3'),
+            self.cleaned_data.get('imagen4')
+        ]
+
+        for i, imagen in enumerate(imagenes):
+            if imagen:
+                Imagen.objects.create(juego=juego, imagen=imagen, orden=i)
+
+        # Crear trailer asociado
+        Trailer.objects.create(
+            juego=juego,
+            video_url=self.cleaned_data['video_url'],
+            img_url=self.cleaned_data['img_url']
+        )
+
+        return juego
+
+
+
+class JuegoFormModificacion(forms.ModelForm):
+    class Meta:
+        model = Juego
+        fields = [
+            'nombre', 'descripcion', 'fecha_lanzamiento', 'desarrolladora',
+            'genero', 'plataforma', 'clasificacion', 'idioma',
+            'requisitos', 'stock', 'available', 'precio', 'descripcionExtensa'
+        ]
+        widgets = {
+            'nombre': forms.TextInput(attrs={'class': 'form-control', 'style': 'background-color: #40010D; color: white;'}),
+            'descripcion': forms.TextInput(attrs={'class': 'form-control', 'style': 'background-color: #40010D; color: white;'}),
+            'fecha_lanzamiento': forms.DateInput(attrs={'class': 'form-control', 'style': 'background-color: #40010D; color: white;'}),
+            'desarrolladora': forms.TextInput(attrs={'class': 'form-control', 'style': 'background-color: #40010D; color: white;'}),
+            'genero': forms.TextInput(attrs={'class': 'form-control', 'style': 'background-color: #40010D; color: white;'}),
+            'plataforma': forms.TextInput(attrs={'class': 'form-control', 'style': 'background-color: #40010D; color: white;'}),
+            'clasificacion': forms.TextInput(attrs={'class': 'form-control', 'style': 'background-color: #40010D; color: white;'}),
+            'idioma': forms.TextInput(attrs={'class': 'form-control', 'style': 'background-color: #40010D; color: white;'}),
+            'requisitos': forms.TextInput(attrs={'class': 'form-control', 'style': 'background-color: #40010D; color: white;'}),
+            'stock': forms.NumberInput(attrs={'class': 'form-control', 'style': 'background-color: #40010D; color: white;'}),
+            'available': forms.CheckboxInput(attrs={'class': 'form-check-input', 'style': 'background-color: #40010D; color: white;'}),
+            'precio': forms.NumberInput(attrs={'class': 'form-control', 'style': 'background-color: #40010D; color: white;'}),
+            'descripcionExtensa': forms.Textarea(attrs={'class': 'form-control', 'style': 'background-color: #40010D; color: white;'}),
+        }
+
+
+class ImagenFormModificacion(forms.ModelForm):
+    class Meta:
+        model = Imagen
+        fields = ['imagen', 'orden']
+        widgets = {
+            'imagen': forms.FileInput(attrs={'class': 'form-control'}),
+            'orden': forms.HiddenInput(),
+        }
+
+
+class TrailerFormModificacion(forms.ModelForm):
+    class Meta:
+        model = Trailer
+        fields = ['video_url', 'img_url']
+        widgets = {
+            'video_url': forms.URLInput(attrs={'class': 'form-control', 'style': 'background-color: #40010D; color: white;'}),
+            'img_url': forms.TextInput(attrs={'class': 'form-control', 'style': 'background-color: #40010D; color: white;'}),
+        }

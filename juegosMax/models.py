@@ -47,25 +47,26 @@ class Juego(models.Model):
 class Imagen(models.Model):
     juego = models.ForeignKey(Juego, related_name='imagenes', on_delete=models.CASCADE)
     imagen = models.ImageField(upload_to='portadas/')
-    orden = models.PositiveIntegerField(editable=False, db_index=True)
+    orden = models.PositiveIntegerField(db_index=True)
 
     def __str__(self):
         return f"Imagen de {self.juego.nombre}"
 
-    def save(self, *args, **kwargs):
-        if self._state.adding:
-            last_order = Imagen.objects.filter(juego=self.juego).aggregate(models.Max('orden'))['orden__max']
-            self.orden = 1 if last_order is None else last_order + 1
-        super().save(*args, **kwargs)
-
     class Meta:
         ordering = ['orden']
+
+    def save(self, *args, **kwargs):
+        if self._state.adding:
+            # Esto asegura que el orden sea incremental automáticamente
+            max_order = Imagen.objects.filter(juego=self.juego).aggregate(models.Max('orden'))['orden__max']
+            self.orden = max_order + 1 if max_order is not None else 0
+        super().save(*args, **kwargs)
 
 
 class Trailer(models.Model):
     juego = models.ForeignKey(Juego, related_name='trailers', on_delete=models.CASCADE)
     video_url = models.URLField(default='')  # Campo para la URL del video
-    img_url = models.URLField(default='')  # Campo para la URL de la imagen del video
+    img_url = models.CharField(default='', max_length=20)  # Campo para la URL de la imagen del video
 
     def __str__(self):
         return self.video_url

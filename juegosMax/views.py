@@ -2,6 +2,7 @@ from .models import Juego, Carrito, ItemCarrito, Imagen, Comentario
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from django.forms import inlineformset_factory
 from .form import *
 import random
 from django.template import RequestContext
@@ -21,7 +22,7 @@ def login_view(request):
         if form.is_valid():
             user = form.get_user()
             login(request, user)
-            return redirect('juegosMax/index.html')  # Cambia 'home' por la URL a la que quieres redirigir tras iniciar sesión
+            return redirect('juegosMax/index.html')
     else:
         form = LoginForm()
         return render(request, 'juegosMax/login.html', {'form': form, 'imagen_aleatoria': imagen_aleatoria})
@@ -98,7 +99,7 @@ def consolaNinSwitch(request):
 
 def consolaPs5(request):
     juegosTipoConsola = Juego.objects.filter(plataforma__icontains='PS5')
-    NovedadesGames = juegosTipoConsola.order_by('fecha_creacion')[:3]
+    NovedadesGames = juegosTipoConsola.order_by('-fecha_creacion')[:3]
     return render(request, 'juegosMax/consola_PlayStation_5.html',{'NovedadesGames': NovedadesGames, 'juegosTipoConsola': juegosTipoConsola})
 
 def consolaXboxSeries(request):
@@ -168,3 +169,66 @@ def view_pago(request):
     else:
         form = PagoForm()
     return render(request, 'juegosMax/pago.html', {'items': items, 'total': total, 'form': form, 'imagen_aleatoria': imagen_aleatoria})
+
+
+from django.contrib.auth.decorators import login_required, user_passes_test
+
+def admin_check(user):
+    return user.is_superuser
+
+@user_passes_test(admin_check)
+@login_required()
+def agregar_Juego(request):
+    if request.method == 'POST':
+        form = JuegoForm(request.POST, request.FILES)
+        if form.is_valid():
+            juego = form.save()
+            return redirect('juego', juego_id=juego.id)
+    return render(request, 'juegosMax/agregar_Juego.html', {'form': JuegoForm()})
+
+
+@user_passes_test(admin_check)
+@login_required()
+def modificar_juego(request, juego_id):
+    juego = get_object_or_404(Juego, pk=juego_id)
+
+    ImagenFormSet = inlineformset_factory(Juego, Imagen, form=ImagenFormModificacion, extra=0, can_delete=True)
+
+    if request.method == 'POST':
+        juego_form = JuegoFormModificacion(request.POST, instance=juego)
+        imagen_formset = ImagenFormSet(request.POST, request.FILES, instance=juego, prefix='imagenes')
+        trailer_form = TrailerFormModificacion(request.POST,
+                                               instance=juego.trailers.first() if juego.trailers.exists() else None)
+
+        if juego_form.is_valid() and imagen_formset.is_valid() and trailer_form.is_valid():
+            juego_form.save()
+            imagen_formset.save()
+
+            trailer = trailer_form.save(commit=False)
+            trailer.juego = juego
+            trailer.save()
+
+            return redirect('juego', juego_id=juego.id)
+    else:
+        juego_form = JuegoFormModificacion(instance=juego)
+        imagen_formset = ImagenFormSet(instance=juego, prefix='imagenes')
+        trailer_form = TrailerFormModificacion(instance=juego.trailers.first() if juego.trailers.exists() else None)
+
+    return render(request, 'juegosMax/modificar_juego.html', {
+        'juego_form': juego_form,
+        'imagen_formset': imagen_formset,
+        'trailer_form': trailer_form,
+        'juego': juego,
+    })
+
+
+@user_passes_test(admin_check)
+@login_required()
+def eliminar_juego(request, juego_id):
+    juego = get_object_or_404(Juego, pk=juego_id)
+
+    if request.method == 'POST':
+        juego.delete()
+        return redirect('index')
+
+    return render(request, 'juegosMax/eliminar_juego.html', {'juego': juego})

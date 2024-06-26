@@ -23,9 +23,23 @@
     <link href="{% static 'Simple-Slider-swiper-bundle.min.css' %}" rel="stylesheet">
     <link href="{% static 'swiper-icons.css' %}" rel="stylesheet">
     <link href="{% static 'font.css' %}" rel="stylesheet">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdv1mONGkKORSWGCcEe1L7p5atacKC0fQ&callback=initMap" async defer type="text/javascript"></script>
+    <link href="{% static 'mapa.js' %}">
+    <script>
+        function initMap() {
+            var coord = {lat: -33.448852539062, lng: -70.67015838623047};
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom:15,
+                center: coord
+            });
+            var marker = new google.maps.Marker({
+                position: coord,
+                map: map
+            });
+        }</script>
 </head>
 
-<body>
+<body >
     <nav class="navbar navbar-expand-md fixed-top navbar-shrink py-3" id="mainNav" style="--bs-primary: #8C182D;--bs-primary-rgb: 140,24,45;--bs-body-color: #F2F2F2;--bs-body-bg: #40010D;">
         <div class="container"><a class="navbar-brand d-flex align-items-center font" href="{% url 'index' %}" style="--bs-body-color: #F2F2F2;"><span><span style="color: rgb(242, 242, 242);">JuegosMax</span></span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
@@ -35,6 +49,9 @@
                         <div class="dropdown-menu"><a class="dropdown-item" href="{% url 'Nintendo_Switch' %}">Nintendo Switch</a><a class="dropdown-item" href="{% url 'PS5' %}">PlayStation 5</a><a class="dropdown-item" href="{% url 'Xbox_Series_X' %}">Xbox Series X/S</a></div>                    </li>
                     <li class="nav-item"></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'contacto' %}"><span style="color: rgb(242, 242, 242);">Contacto</span></a></li>
+                    {% if user.is_superuser %}
+                        <li class="nav-item"><a class="nav-link" href="{% url 'AgregarJuego' %}"><span style="color: rgb(242, 242, 242);">Agregar Juego</span></a></li>
+                    {% endif %}
                 </ul>
                 {% if user.is_authenticated%}
                         <a class="nav-item" ><span style="color: rgb(242, 242, 242);margin-right: 10px;">Bienvenido, {{ user.username }}!</span>  </a>
@@ -72,14 +89,14 @@
             </div>
         </div>
     </section>
-    <section class="position-relative py-4 py-xl-5">
+    <section class="position-relative py-4 py-xl-5" onload="initMap()">
+        <h2 class="display-6 fw-bold text-center mb-4">Ubicación</h2>
         <div class="container position-relative">
-            <div class="row">
-                <gmp-map center="-33.44883346557617,-70.67021179199219" zoom="14" map-id="DEMO_MAP_ID">
-                  <gmp-advanced-marker position="-33.44883346557617,-70.67021179199219" title="My location"></gmp-advanced-marker>
-                </gmp-map>
+            <div class="row" id="map">
+                <div class="col-md-8 col-xl-6 mx-auto">
             </div>
         </div>
+            <p class="text-muted"><span style="color: rgb(242, 242, 242); background-color: rgba(13, 13, 13, 0);">Encuéntranos en Av. España 8, 8350708 Santiago, Región Metropolitana</span></p>
 
     </section>
     <section class="py-5 my-5">

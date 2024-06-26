@@ -4,8 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f2c9ea0-74ff-4212-b785-50b08a8d729b" name="Changes" comment="segundo commit">
+    <list default="true" id="8f2c9ea0-74ff-4212-b785-50b08a8d729b" name="Changes" comment="diagrama de flujo">
+      <change afterPath="$PROJECT_DIR$/juegosMax/templates/juegosMax/agregar_Juego.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/juegosMax/templates/juegosMax/eliminar_juego.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/juegosMax/templates/juegosMax/modificar_Juego.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JuegosMaxNuevaVersion/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/JuegosMaxNuevaVersion/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/juegosMax/form.py" beforeDir="false" afterPath="$PROJECT_DIR$/juegosMax/form.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/juegosMax/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/juegosMax/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/juegosMax/templates/juegosMax/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/juegosMax/templates/juegosMax/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/juegosMax/templates/juegosMax/assets/js/mapa.js" beforeDir="false" afterPath="$PROJECT_DIR$/juegosMax/templates/juegosMax/assets/js/mapa.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/juegosMax/templates/juegosMax/consola_Nintendo_Switch.html" beforeDir="false" afterPath="$PROJECT_DIR$/juegosMax/templates/juegosMax/consola_Nintendo_Switch.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/juegosMax/templates/juegosMax/consola_PlayStation_5.html" beforeDir="false" afterPath="$PROJECT_DIR$/juegosMax/templates/juegosMax/consola_PlayStation_5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/juegosMax/templates/juegosMax/consola_Xbox_Series.html" beforeDir="false" afterPath="$PROJECT_DIR$/juegosMax/templates/juegosMax/consola_Xbox_Series.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/juegosMax/templates/juegosMax/contacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/juegosMax/templates/juegosMax/contacts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/juegosMax/templates/juegosMax/faq.html" beforeDir="false" afterPath="$PROJECT_DIR$/juegosMax/templates/juegosMax/faq.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/juegosMax/templates/juegosMax/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/juegosMax/templates/juegosMax/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/juegosMax/templates/juegosMax/juego.html" beforeDir="false" afterPath="$PROJECT_DIR$/juegosMax/templates/juegosMax/juego.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/juegosMax/templates/juegosMax/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/juegosMax/templates/juegosMax/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/juegosMax/templates/juegosMax/view_cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/juegosMax/templates/juegosMax/view_cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/juegosMax/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/juegosMax/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template.md" beforeDir="false" afterPath="$PROJECT_DIR$/template.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,42 +75,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Django Server.JuegosMaxNuevaVersion.executor": "Run",
-    "JavaScript Debug.login.html.executor": "Run",
-    "Python.manage.executor": "Run",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "database.data.extractors.current.export.id": "SQL Inserts",
-    "database.data.extractors.current.id": "SQL Inserts",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/inach/OneDrive/Documentos/Proyectos/Proyectos web/juegosMax",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "vcs.Git",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Django Server.JuegosMaxNuevaVersion.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.login.html.executor&quot;: &quot;Run&quot;,
+    &quot;Python.manage.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;database.data.extractors.current.export.id&quot;: &quot;SQL Inserts&quot;,
+    &quot;database.data.extractors.current.id&quot;: &quot;SQL Inserts&quot;,
+    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR_AND_PREVIEW&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/inach/OneDrive/Documentos/Proyectos/Proyectos web/JuegosMaxNuevaVersion/juegosMax/templates/juegosMax&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "oracle"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;oracle&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\inach\OneDrive\Documentos\Proyectos\Proyectos web\JuegosMaxNuevaVersion\juegosMax\templates\juegosMax" />
       <recent name="C:\Users\inach\OneDrive\Documentos\Proyectos\Proyectos web\JuegosMaxNuevaVersion\juegosMax\templates\juegosMax\assets" />
       <recent name="C:\Users\inach\OneDrive\Documentos\Proyectos\Proyectos web\JuegosMaxNuevaVersion\media" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\inach\OneDrive\Documentos\Proyectos\Proyectos web\JuegosMaxNuevaVersion\templates" />
       <recent name="C:\Users\inach\OneDrive\Documentos\Proyectos\Proyectos web\JuegosMaxNuevaVersion\juegosMax\templates\juegosMax" />
       <recent name="C:\Users\inach\OneDrive\Documentos\Proyectos\Proyectos web\JuegosMaxNuevaVersion\media\media" />
       <recent name="C:\Users\inach\OneDrive\Documentos\Proyectos\Proyectos web\JuegosMaxNuevaVersion\juegosMax" />
@@ -157,8 +181,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-PY-241.15989.155" />
-        <option value="bundled-python-sdk-babbdf50b680-7c6932dee5e4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.15989.155" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.17890.14" />
+        <option value="bundled-python-sdk-5b207ade9991-7e9c3bbb6e34-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.17890.14" />
       </set>
     </attachedChunks>
   </component>
@@ -185,7 +209,12 @@
       <workItem from="1718988415339" duration="16871000" />
       <workItem from="1719030098939" duration="4916000" />
       <workItem from="1719075828528" duration="15616000" />
-      <workItem from="1719175187792" duration="6802000" />
+      <workItem from="1719175187792" duration="7492000" />
+      <workItem from="1719205267366" duration="324000" />
+      <workItem from="1719235929130" duration="13448000" />
+      <workItem from="1719328454233" duration="89000" />
+      <workItem from="1719328733001" duration="15508000" />
+      <workItem from="1719411371106" duration="1808000" />
     </task>
     <task id="LOCAL-00001" summary="primer commit">
       <option name="closed" value="true" />
@@ -203,7 +232,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719183302779</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="diagrama de flujo">
+      <option name="closed" value="true" />
+      <created>1719185573732</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1719185573732</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,7 +260,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="primer commit" />
     <MESSAGE value="segundo commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="segundo commit" />
+    <MESSAGE value="diagrama de flujo" />
+    <option name="LAST_COMMIT_MESSAGE" value="diagrama de flujo" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/JuegosMaxNuevaVersion$manage.coverage" NAME="manage Coverage Results" MODIFIED="1718033371570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

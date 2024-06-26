@@ -157,6 +157,9 @@ Debe mostrar una lista paginada de resultados de búsqueda con imágenes, títul
 * Los usuarios deben poder agregar y eliminar productos de su carrito de compras.
 Debe mostrar el subtotal actualizado y permitir a los usuarios proceder al pago.
 
+>Agregar productos
+* Los administradores del sistema deben poder agregar nuevos productos al catálogo.
+
 ### 3.3 Calidad del Servicio
 > 
 #### 3.3.1 Rendimiento
@@ -191,7 +194,7 @@ El código fuente debe ser compatible con diferentes sistemas operativos y confi
 #### 3.5.6 Costo
 El costo estimado del desarrollo inicial del sistema es de $25.000.000, incluyendo licencias de software, infraestructura de hardware, y salarios del personal técnico. Los costos de mantenimiento anual, que incluyen actualizaciones de software, soporte técnico y gestión de la base de datos Oracle, se estiman en $7.000.000.
 #### 3.5.7 Fecha Límite
-La primera versión funcional del sistema ya esta completada. Esto incluye funcionalidades básicas como registro de usuarios, catálogo de videojuegos, carrito de compras y procesamiento de pagos. Las actualizaciones mayores, como la implementación de recomendaciones personalizadas y la vista de andministrador para agregar y modificar video juegos, deben planificarse y entregarse en 2 meses.
+La primera versión funcional del sistema ya esta completada. Esto incluye funcionalidades básicas como registro de usuarios, catálogo de videojuegos, insercion de juegos, carrito de compras y procesamiento de pagos. Las actualizaciones mayores, como la implementación de recomendaciones personalizadas y la vista de andministrador para modificar y agregar imagenes de videojuegos, deben planificarse y entregarse.
 #### 3.5.8 Prueba de Concepto
 
 ## 4. Verificación
