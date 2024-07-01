@@ -5,4 +5,19 @@
       <data-sources db="83a769a1-42b3-4a47-ac20-cc4cf6d7ab61" />
     </mapping>
   </component>
+  <component name="SqlDataSourceStorage">
+    <option name="dataSources">
+      <list>
+        <State>
+          <option name="id" value="1b08a05a-ed1d-4c95-b037-d889bdda5354" />
+          <option name="name" value="@localhost (DDL)" />
+          <option name="dbmsName" value="ORACLE" />
+          <option name="urls">
+            <array />
+          </option>
+          <option name="outLayout" value="File per object by schema.groovy" />
+        </State>
+      </list>
+    </option>
+  </component>
 </project>
