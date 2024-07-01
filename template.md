@@ -54,7 +54,7 @@ Tabla de Contenidos
 |        |         |                       |           |
 
 ## 1. Introducción
-> 
+
 
 ### 1.1 Propósito del Documento
 El propósito de este documento es definir los requisitos para el desarrollo de una página web de ventas de videojuegos, utilizando Django como backend y una base de datos Oracle. El sistema permitirá a los usuarios buscar, comprar y revisar videojuegos.
@@ -74,7 +74,7 @@ Este documento cubre todas las funcionalidades necesarias para la gestión de pr
 ### 1.5 Resumen del Documento
 Este documento describe los requisitos para el desarrollo de una página web de ventas de videojuegos. Se describen las interfaces externas, los requisitos funcionales y de calidad del servicio, y los requisitos de diseño e implementación.
 ## 2. Descripción del Producto
-> 
+
 ### 2.1 Perspectiva del Producto
 La página web de ventas de videojuegos es una aplicación web que se integra con una base de datos Oracle y utiliza Django para el backend. El sistema será accesible a través de navegadores web.
 ### 2.2 Funciones del Producto
@@ -83,6 +83,8 @@ La página web de ventas de videojuegos es una aplicación web que se integra co
 * Carrito de compras.
 * Procesamiento de pedidos y pagos.
 * Revisiones y valoraciones de productos.
+* Búsqueda de productos por plataforma.
+* Modificar, agregar y eliminar productos del catálogo (solo administrador).
 ### 2.3 Restricciones del Producto
 * Administradores del sistema.
 * Usuarios registrados (clientes).
@@ -99,6 +101,7 @@ La página web de ventas de videojuegos es una aplicación web que se integra co
 |------------------------------|-------------------------------| --------------- | -------------- |
 | Gestión de Usuarios          | Backend Django                | Sí              | No             |
 | Catálogo de Productos        | Base de Datos Oracle          | Sí              | No             |
+| Modificacion Catalogo        | Base de Datos Oracle          | Sí              | No             |
 | Carrito de Compras           | Backend Django                | Sí              | No             |
 | Procesamiento de Pagos       | Integración                   | Sí              | No             |
 | Búsqueda                     | Backend Django                | Sí              | No             |
@@ -109,7 +112,7 @@ La página web de ventas de videojuegos es una aplicación web que se integra co
 | Mantenibilidad               | Documentación y Modularidad   | Sí              | No             |
 | Portabilidad                 | Configuración del Sistema     | Sí              | No             |
 ## 3. Requisitos
-> 
+
 ### 3.1 Interfaces Externas
 
 #### 3.1.1 Interfaces de Usuario
