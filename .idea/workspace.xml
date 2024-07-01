@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f2c9ea0-74ff-4212-b785-50b08a8d729b" name="Changes" comment="Se agrega la carta gantt y se modifica el documento ERS(template.md)">
-      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqlDataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqlDataSources.xml" afterDir="false" />
+    <list default="true" id="8f2c9ea0-74ff-4212-b785-50b08a8d729b" name="Changes" comment="Se crea el readmi con la explicacion e instalacion de la base de datos">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +72,7 @@
     "django.template.preview.state": "SHOW_EDITOR_AND_PREVIEW",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/inach/OneDrive/Documentos/Proyectos/Proyectos web/WebProfes",
+    "last_opened_file_path": "C:/Users/inach/OneDrive/Escritorio",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -207,7 +205,7 @@
       <workItem from="1719328733001" duration="15508000" />
       <workItem from="1719411371106" duration="8580000" />
       <workItem from="1719612454061" duration="561000" />
-      <workItem from="1719842474558" duration="5830000" />
+      <workItem from="1719842474558" duration="6795000" />
     </task>
     <task id="LOCAL-00001" summary="primer commit">
       <option name="closed" value="true" />
@@ -257,7 +255,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719845154105</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Se crea el readmi con la explicacion e instalacion de la base de datos">
+      <option name="closed" value="true" />
+      <created>1719848420490</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1719848420491</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,7 +288,8 @@
     <MESSAGE value="cuarto commit" />
     <MESSAGE value="quinto commit" />
     <MESSAGE value="Se agrega la carta gantt y se modifica el documento ERS(template.md)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se agrega la carta gantt y se modifica el documento ERS(template.md)" />
+    <MESSAGE value="Se crea el readmi con la explicacion e instalacion de la base de datos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se crea el readmi con la explicacion e instalacion de la base de datos" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/JuegosMaxNuevaVersion$manage.coverage" NAME="manage Coverage Results" MODIFIED="1718033371570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
