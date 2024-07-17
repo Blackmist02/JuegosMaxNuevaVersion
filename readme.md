@@ -16,3 +16,11 @@
 >* create user c##juegosMax identified by juegosMax;
 >* grant connect, resource to c##juegosMax;
 >* alter user c##juegosMax default tablespace users quota unlimited on users;
+
+
+## Ahora ejecutar el proyecto para que se creen las tablas
+
+## Para poblar las tablas ya creadas estan los scripts en la carpeta /Poblacion de Base de Datos
+
+
+>* El documento ERS se encuentra en template.md
