@@ -45,17 +45,6 @@ th, td {
   border-bottom: 1px solid #ddd;
 }
 
-
-
-a {
-  color: red;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
 .imagen-ajustada {
     width: 300px;
     height: 200px;

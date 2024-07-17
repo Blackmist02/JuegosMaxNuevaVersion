@@ -1,4 +1,7 @@
 from .models import Juego, Carrito, ItemCarrito, Imagen, Comentario
+from django.http import JsonResponse
+from django.db.models import Q
+from django.urls import reverse
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
@@ -13,6 +16,16 @@ def home(request):
     banner = Juego.objects.all().order_by('fecha_creacion')
     NovedadesGames = Juego.objects.all().order_by('fecha_creacion')[:3]
     return render(request, 'juegosMax/index.html', {'NovedadesGames': NovedadesGames, 'banner': banner})
+
+
+def buscar_juegos(request):
+    query = request.GET.get('q', '')
+    if query:
+        juegos = Juego.objects.filter(Q(nombre__icontains=query)) # | Q(descripcion__icontains=query) sirve para buscar en la descripción
+        results = [{'id': juego.id, 'nombre': juego.nombre, 'url': reverse('juego', args=[juego.id])} for juego in juegos]
+    else:
+        results = []
+    return JsonResponse({'results': results})
 
 def login_view(request):
     imagenes = Imagen.objects.all()
